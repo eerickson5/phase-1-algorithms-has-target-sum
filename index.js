@@ -13,6 +13,14 @@ function hasTargetSum(array, target) {
 
 /* 
   Write the Big O time complexity of your function here
+
+  This has a quadratic time complexity but I'm not sure how to do it otherwise.
+  I loop through the array once, then call indexOf within it.
+  Both of these actions have a linear time complexity and since they're nested, that becomes n^2.
+  Looking forward to learning quicker solutions.
+
+  This has a linear space complexity because I create an indexOfAppend on every loop iteration.
+  It is more readable than if I call indexOf twice, though.
 */
 
 /* 
