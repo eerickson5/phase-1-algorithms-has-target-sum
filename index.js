@@ -1,5 +1,14 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+
+  for(let i = 0; i < array.length; i ++){
+    let indexOfAddend = array.indexOf(target - array[i])
+    if( indexOfAddend >= 0 && indexOfAddend != i) {
+      return true;
+    }
+  }
+
+  return false;
 }
 
 /* 
@@ -7,7 +16,8 @@ function hasTargetSum(array, target) {
 */
 
 /* 
-  Add your pseudocode here
+  iterate through array
+  find indexOf target / current
 */
 
 /*
@@ -29,6 +39,9 @@ if (require.main === module) {
 
   console.log("Expecting: false");
   console.log("=>", hasTargetSum([1, 2, 5], 4));
+
+  console.log("Expecting: true");
+  console.log("=>", hasTargetSum([1, 2, 2, 5], 4));
 }
 
 module.exports = hasTargetSum;
